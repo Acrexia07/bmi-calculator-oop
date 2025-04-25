@@ -44,11 +44,6 @@ public class InputValidator {
         return true;
     }
 
-    // Method: Validate name to the person object
-    public static void setValidateName (Person person, String name) {
-        person.setName(name);
-    }
-
     // Method: Validate user input - Age
     public static int validateAgeInput () {
 

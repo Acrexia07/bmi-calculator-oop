@@ -53,7 +53,7 @@ public class BMIEvaluator {
         }
         else {
             person.displayPersonInfo();
-            System.out.printf("Your BMI is: %.2f.\n", resultBMI);
+            System.out.printf("BMI Results: %.2f.\n", resultBMI);
             if (resultBMI < 18.5) {
                 System.out.println("Description: You are underweight.");
             } else if (resultBMI >= 18.5 && resultBMI <= 24.9) {
