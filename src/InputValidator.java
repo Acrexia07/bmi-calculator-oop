@@ -74,6 +74,39 @@ public class InputValidator {
         }
     }
 
+    // ---------- BMI related inputs ----------
+
+    // Method: Validate user input - Weight
+    public static boolean evaluateWeightInput (double weight) {
+        // Process: Evaluate Weight input
+        if(weight <= 0){
+            System.out.println("Invalid weight input! Please try again.");
+            return false;
+        }
+        else if (weight <= 10 || weight >= 300) {
+            System.out.println("Weight out of range! Please try again.");
+            return false;
+        } else {
+            return true;
+        }
+    }
+
+    // Method: Validate user input - Height
+    public static boolean evaluateHeightInput (double height) {
+        // Process: Evaluate Height input
+        if (height <= 0 ) {
+            System.out.println("Invalid input: Height must be positive. Please try again.");
+            return false;
+        }
+        else if (height < 0.5 || height > 2.5) {
+            System.out.println("Invalid input: Height out of range. Please enter a realistic height (0.5m to 2.5m).");
+            return false;
+        }
+        return true;
+    }
+
+
+
     // Method: Validate user Input - BMI inputs
     public static void enterBMIInputs (Person person) {
 
@@ -85,13 +118,13 @@ public class InputValidator {
         do {
             // Process: Validate inputs (Double data type)
             weight = validateDoubleInput("Enter your weight (kg): ");
-        } while (!BMIEvaluator.evaluateWeightInput(weight));
+        } while (!evaluateWeightInput(weight));
 
         // Process: Repeat input prompt until a valid height is entered
         do {
             // Process: Validate inputs (Double data type)
             height = validateDoubleInput("Enter your height (m): ");
-        } while (!BMIEvaluator.evaluateHeightInput(height));
+        } while (!evaluateHeightInput(height));
 
         // Process: Evaluate BMI results
         BMIEvaluator.evaluateBMI(weight, height, person);
