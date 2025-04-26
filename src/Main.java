@@ -7,7 +7,7 @@ public class Main {
         // Input/Output: BMI inputs
         InputValidator.enterBMIInputs(person);
 
-        // Exit: Closing Scanner Object
+        // Exit: Close Scanner Object
         InputValidator.closeScanner();
     }
 }
