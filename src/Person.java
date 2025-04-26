@@ -1,7 +1,7 @@
 public class Person extends PersonInfo {
 
     // Initialization: Variable Declarations
-    private String name;
+    String name;
     int age;
     double weight;
     double height;
@@ -14,11 +14,6 @@ public class Person extends PersonInfo {
         this.height = height;
     }
 
-    // Method: Setter (name)
-    public void setName (String name) {
-        this.name = name;
-    }
-
     // Method: Setter (weight)
     public void setWeight (double weight) {
         this.weight = weight;
@@ -29,12 +24,12 @@ public class Person extends PersonInfo {
         this.height = height;
     }
 
-    // Method: Setter (name)
+    // Method: Getter (name)
     public String getName () {
         return name;
     }
 
-    // Method: Setter (age)
+    // Method: Getter (age)
     public int getAge () {
         return age;
     }
