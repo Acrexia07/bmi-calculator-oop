@@ -18,7 +18,7 @@ public class InputValidator {
             try {
                 input = scn.nextDouble();
                 if (input <= 0) {
-                    System.out.println("Invalid input: Number must be positive.");
+                        System.out.println("Invalid input: Number must be positive.");
                 } else {
                     return input;
                 }
@@ -32,11 +32,13 @@ public class InputValidator {
 
     // Method: Validate user input - Name
     public static boolean validateNameInput (String name) {
-        // Initialization: Variable Declaration
+
+        // Process: Validate name inputs if name is empty or null
         if (name == null || name.trim().isEmpty()) {
             System.out.println("Name cannot be empty. Please try again.");
             return false;
         }
+        // Process: Validate name inputs if name has special characters
         else if (!name.matches("^[a-zA-Z\\s-]+$")) {
             System.out.println("Invalid name. Please enter a valid name containing only letters, spaces, and hyphens.");
             return false;
@@ -65,9 +67,10 @@ public class InputValidator {
                 if (age <= 0) {
                     System.out.println("Age doesn't contain negative numbers! Please try again.");
                 }
-                else if ( age > 100){
+                else if (age > 100){
                     System.out.println("Invalid Age! Please try again.");
-                } else {
+                }
+                else {
                     return age;
                 }
             }
@@ -104,8 +107,6 @@ public class InputValidator {
         }
         return true;
     }
-
-
 
     // Method: Validate user Input - BMI inputs
     public static void enterBMIInputs (Person person) {
